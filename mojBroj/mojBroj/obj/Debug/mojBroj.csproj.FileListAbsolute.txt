@@ -1,0 +1,10 @@
+D:\Code\C#\mojBroj\mojBroj\bin\Debug\mojBroj.exe.config
+D:\Code\C#\mojBroj\mojBroj\bin\Debug\mojBroj.exe
+D:\Code\C#\mojBroj\mojBroj\bin\Debug\mojBroj.pdb
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.csprojAssemblyReference.cache
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.Properties.Resources.resources
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.csproj.GenerateResource.cache
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.csproj.CoreCompileInputs.cache
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.exe
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.pdb
+D:\Code\C#\mojBroj\mojBroj\obj\Debug\mojBroj.Form1.resources
