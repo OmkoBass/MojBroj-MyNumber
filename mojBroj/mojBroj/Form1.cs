@@ -28,9 +28,7 @@ namespace mojBroj
             minus.Enabled = false;
             puta.Enabled = false;
             podeljeno.Enabled = false;
-            levaZagrada.Enabled = false;
-            desnaZagrada.Enabled = false;
-
+            nazad.Enabled = false;
         }
 
         int brojac = 0;
@@ -63,8 +61,7 @@ namespace mojBroj
                 minus.Enabled = true;
                 puta.Enabled = true;
                 podeljeno.Enabled = true;
-                levaZagrada.Enabled = true;
-                desnaZagrada.Enabled = true;
+                nazad.Enabled = true;
             }
             brojac++;
         }
@@ -160,6 +157,7 @@ namespace mojBroj
 
         private void Nazad_Click(object sender, EventArgs e)
         {
+            trenutniBroj.Text = "";
             input.Text = "";
             prvi.BackColor = Color.DarkRed;
             drugi.BackColor = Color.DarkRed;
@@ -182,10 +180,7 @@ namespace mojBroj
                 string s = MathParser.EvalExpression(input.Text.ToCharArray()).ToString();
                 trenutniBroj.Text = s;
             }
-            catch
-            {
-
-            }
+            catch { }
         }
     }
 }
