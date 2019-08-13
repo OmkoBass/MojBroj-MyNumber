@@ -21,6 +21,8 @@ namespace mojBroj
         {
             InitializeComponent();
 
+            MaximizeBox = false;
+            MinimizeBox = false;
             input.ReadOnly = true;
             ok.Enabled = false;
             plus.Enabled = false;
@@ -58,10 +60,6 @@ namespace mojBroj
                 cetvrti.BackColor = Color.DarkRed;
                 peti.BackColor = Color.DarkRed;
                 sesti.BackColor = Color.DarkRed;
-                plus.Enabled = true;
-                minus.Enabled = true;
-                puta.Enabled = true;
-                podeljeno.Enabled = true;
                 nazad.Enabled = true;
                 levaZagrada.Enabled = true;
                 desnaZagrada.Enabled = true;
@@ -71,7 +69,7 @@ namespace mojBroj
 
         private void Ok_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(input.Text) == false)
+            try
             {
                 Expression ex = new Expression(input.Text);
                 string s = ex.calculate().ToString();
@@ -80,80 +78,95 @@ namespace mojBroj
                 if (x == y) { MessageBox.Show("Tacno!"); this.Close(); }
                 else { MessageBox.Show($"Netacno! Tvoj broj je {x}"); this.Close(); }
             }
-            else
-            {
-                MessageBox.Show("Los unos!"); this.Close();
-            }
+            catch { MessageBox.Show("Los unos! / Bad input!"); this.Close(); }
         }
 
         private void Plus_Click(object sender, EventArgs e)
         {
             input.AppendText("+");
+            disableOperations();
+            enableNumbers();
         }
 
         private void Minus_Click(object sender, EventArgs e)
         {
             input.AppendText("-");
+            disableOperations();
+            enableNumbers();
         }
 
         private void Puta_Click(object sender, EventArgs e)
         {
             input.AppendText("*");
+            disableOperations();
+            enableNumbers();
         }
 
         private void Podeljeno_Click(object sender, EventArgs e)
         {
-            input.AppendText("÷");
+            input.AppendText("/");
+            disableOperations();
+            enableNumbers();
+        }
+        private void LevaZagrada_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText("(");
+            disableOperations();
+            enableNumbers();
+        }
+        private void DesnaZagrada_Click(object sender, EventArgs e)
+        {
+            input.AppendText(")");
+            disableOperations();
+            enableNumbers();
         }
 
         private void Prvi_Click(object sender, EventArgs e)
         {
             input.AppendText(prvi.Text);
             prvi.BackColor = Color.White;
-            prvi.Enabled = false;
+            enableOperations();
+            disableNumbers();
         }
 
         private void Drugi_Click(object sender, EventArgs e)
         {
             input.AppendText(drugi.Text);
             drugi.BackColor = Color.White;
-            drugi.Enabled = false;
+            enableOperations();
+            disableNumbers();
         }
 
         private void Treci_Click(object sender, EventArgs e)
         {
             input.AppendText(treci.Text);
             treci.BackColor = Color.White;
-            treci.Enabled = false;
+            enableOperations();
+            disableNumbers();
         }
 
         private void Cetvrti_Click(object sender, EventArgs e)
         {
             input.AppendText(cetvrti.Text);
             cetvrti.BackColor = Color.White;
-            cetvrti.Enabled = false;
+            enableOperations();
+            disableNumbers();
         }
 
         private void Peti_Click(object sender, EventArgs e)
         {
             input.AppendText(peti.Text);
             peti.BackColor = Color.White;
-            peti.Enabled = false;
+            enableOperations();
+            disableNumbers();
         }
 
         private void Sesti_Click(object sender, EventArgs e)
         {
             input.AppendText(sesti.Text);
             sesti.BackColor = Color.White;
-            sesti.Enabled = false;
-        }
-        private void LevaZagrada_Click_1(object sender, EventArgs e)
-        {
-            input.AppendText("(");
-        }
-        private void DesnaZagrada_Click(object sender, EventArgs e)
-        {
-            input.AppendText(")");
+            enableOperations();
+            disableNumbers();
         }
 
         private void Nazad_Click(object sender, EventArgs e)
@@ -181,9 +194,45 @@ namespace mojBroj
                 Expression ex = new Expression(input.Text);
                 string s = ex.calculate().ToString();
                 trenutniBroj.Text = s;
+                if(s.Equals(brojPogadjas.Text)) { trenutniBroj.BackColor = Color.Green; }
             }
             catch { }
         }
 
+        public void enableOperations()
+        {
+            plus.Enabled = true;
+            minus.Enabled = true;
+            puta.Enabled = true;
+            podeljeno.Enabled = true;
+        }
+
+        public void disableOperations()
+        {
+            plus.Enabled = false;
+            minus.Enabled = false;
+            puta.Enabled = false;
+            podeljeno.Enabled = false;
+        }
+
+        public void enableNumbers()
+        {
+            prvi.Enabled = true;
+            drugi.Enabled = true;
+            treci.Enabled = true;
+            cetvrti.Enabled = true;
+            peti.Enabled = true;
+            sesti.Enabled = true;
+        }
+
+        public void disableNumbers()
+        {
+            prvi.Enabled = false;
+            drugi.Enabled = false;
+            treci.Enabled = false;
+            cetvrti.Enabled = false;
+            peti.Enabled = false;
+            sesti.Enabled = false;
+        }
     }
 }

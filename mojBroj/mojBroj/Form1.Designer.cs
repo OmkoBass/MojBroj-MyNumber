@@ -275,7 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(525, 258);
+            this.ClientSize = new System.Drawing.Size(525, 252);
             this.Controls.Add(this.desnaZagrada);
             this.Controls.Add(this.levaZagrada);
             this.Controls.Add(this.tr);
@@ -295,6 +295,8 @@
             this.Controls.Add(this.drugi);
             this.Controls.Add(this.prvi);
             this.Controls.Add(this.brojPogadjas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(541, 291);
             this.Name = "Form1";
             this.Text = "Moj broj";
             this.ResumeLayout(false);
@@ -305,12 +307,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox brojPogadjas;
-        private System.Windows.Forms.TextBox prvi;
-        private System.Windows.Forms.TextBox drugi;
-        private System.Windows.Forms.TextBox treci;
-        private System.Windows.Forms.TextBox cetvrti;
-        private System.Windows.Forms.TextBox peti;
-        private System.Windows.Forms.TextBox sesti;
         private System.Windows.Forms.Button stop;
         private System.Windows.Forms.TextBox input;
         private System.Windows.Forms.Button ok;
@@ -323,6 +319,12 @@
         internal System.Windows.Forms.Button nazad;
         private System.Windows.Forms.Button levaZagrada;
         private System.Windows.Forms.Button desnaZagrada;
+        private System.Windows.Forms.TextBox prvi;
+        private System.Windows.Forms.TextBox drugi;
+        private System.Windows.Forms.TextBox treci;
+        private System.Windows.Forms.TextBox cetvrti;
+        private System.Windows.Forms.TextBox peti;
+        private System.Windows.Forms.TextBox sesti;
     }
 }
 
