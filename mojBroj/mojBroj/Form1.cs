@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Collections;
+using org.mariuszgromada.math.mxparser;
 
 namespace mojBroj
 {
@@ -20,8 +21,6 @@ namespace mojBroj
         {
             InitializeComponent();
 
-
-
             input.ReadOnly = true;
             ok.Enabled = false;
             plus.Enabled = false;
@@ -29,6 +28,8 @@ namespace mojBroj
             puta.Enabled = false;
             podeljeno.Enabled = false;
             nazad.Enabled = false;
+            levaZagrada.Enabled = false;
+            desnaZagrada.Enabled = false;
         }
 
         int brojac = 0;
@@ -62,6 +63,8 @@ namespace mojBroj
                 puta.Enabled = true;
                 podeljeno.Enabled = true;
                 nazad.Enabled = true;
+                levaZagrada.Enabled = true;
+                desnaZagrada.Enabled = true;
             }
             brojac++;
         }
@@ -70,10 +73,10 @@ namespace mojBroj
         {
             if (string.IsNullOrEmpty(input.Text) == false)
             {
-                string s = MathParser.EvalExpression(input.Text.ToCharArray()).ToString();
+                Expression ex = new Expression(input.Text);
+                string s = ex.calculate().ToString();
                 int x = Int16.Parse(s);
                 int y = Int16.Parse(brojPogadjas.Text);
-
                 if (x == y) { MessageBox.Show("Tacno!"); this.Close(); }
                 else { MessageBox.Show($"Netacno! Tvoj broj je {x}"); this.Close(); }
             }
@@ -144,12 +147,10 @@ namespace mojBroj
             sesti.BackColor = Color.White;
             sesti.Enabled = false;
         }
-
-        private void LevaZagrada_Click(object sender, EventArgs e)
+        private void LevaZagrada_Click_1(object sender, EventArgs e)
         {
             input.AppendText("(");
         }
-
         private void DesnaZagrada_Click(object sender, EventArgs e)
         {
             input.AppendText(")");
@@ -177,10 +178,12 @@ namespace mojBroj
         {
             try
             {
-                string s = MathParser.EvalExpression(input.Text.ToCharArray()).ToString();
+                Expression ex = new Expression(input.Text);
+                string s = ex.calculate().ToString();
                 trenutniBroj.Text = s;
             }
             catch { }
         }
+
     }
 }

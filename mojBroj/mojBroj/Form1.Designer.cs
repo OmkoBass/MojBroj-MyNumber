@@ -45,6 +45,8 @@
             this.nazad = new System.Windows.Forms.Button();
             this.trenutniBroj = new System.Windows.Forms.TextBox();
             this.tr = new System.Windows.Forms.Label();
+            this.levaZagrada = new System.Windows.Forms.Button();
+            this.desnaZagrada = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // brojPogadjas
@@ -246,12 +248,36 @@
             this.tr.TabIndex = 18;
             this.tr.Text = "TREUNTNO:";
             // 
+            // levaZagrada
+            // 
+            this.levaZagrada.Font = new System.Drawing.Font("Fira Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levaZagrada.Location = new System.Drawing.Point(472, 164);
+            this.levaZagrada.Name = "levaZagrada";
+            this.levaZagrada.Size = new System.Drawing.Size(43, 33);
+            this.levaZagrada.TabIndex = 19;
+            this.levaZagrada.Text = "(";
+            this.levaZagrada.UseVisualStyleBackColor = true;
+            this.levaZagrada.Click += new System.EventHandler(this.LevaZagrada_Click_1);
+            // 
+            // desnaZagrada
+            // 
+            this.desnaZagrada.Font = new System.Drawing.Font("Fira Code", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.desnaZagrada.Location = new System.Drawing.Point(472, 203);
+            this.desnaZagrada.Name = "desnaZagrada";
+            this.desnaZagrada.Size = new System.Drawing.Size(43, 33);
+            this.desnaZagrada.TabIndex = 20;
+            this.desnaZagrada.Text = ")";
+            this.desnaZagrada.UseVisualStyleBackColor = true;
+            this.desnaZagrada.Click += new System.EventHandler(this.DesnaZagrada_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(525, 258);
+            this.Controls.Add(this.desnaZagrada);
+            this.Controls.Add(this.levaZagrada);
             this.Controls.Add(this.tr);
             this.Controls.Add(this.trenutniBroj);
             this.Controls.Add(this.nazad);
@@ -295,6 +321,8 @@
         private System.Windows.Forms.TextBox trenutniBroj;
         private System.Windows.Forms.Label tr;
         internal System.Windows.Forms.Button nazad;
+        private System.Windows.Forms.Button levaZagrada;
+        private System.Windows.Forms.Button desnaZagrada;
     }
 }
 

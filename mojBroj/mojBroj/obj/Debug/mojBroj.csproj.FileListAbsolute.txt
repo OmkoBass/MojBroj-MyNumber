@@ -18,3 +18,5 @@ D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\obj\Debug\mojBroj.csproj.GenerateResourc
 D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\obj\Debug\mojBroj.csproj.CoreCompileInputs.cache
 D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\obj\Debug\mojBroj.exe
 D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\obj\Debug\mojBroj.pdb
+D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\bin\Debug\MathParser.org-mXparser.dll
+D:\Git\MojBroj-MyNumber\mojBroj\mojBroj\obj\Debug\mojBroj.csproj.CopyComplete
