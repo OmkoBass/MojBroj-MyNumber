@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.brojPogadjas = new System.Windows.Forms.TextBox();
-            this.prvi = new System.Windows.Forms.TextBox();
-            this.drugi = new System.Windows.Forms.TextBox();
-            this.treci = new System.Windows.Forms.TextBox();
-            this.cetvrti = new System.Windows.Forms.TextBox();
-            this.peti = new System.Windows.Forms.TextBox();
-            this.sesti = new System.Windows.Forms.TextBox();
             this.stop = new System.Windows.Forms.Button();
             this.input = new System.Windows.Forms.TextBox();
             this.ok = new System.Windows.Forms.Button();
@@ -43,101 +36,18 @@
             this.puta = new System.Windows.Forms.Button();
             this.podeljeno = new System.Windows.Forms.Button();
             this.nazad = new System.Windows.Forms.Button();
-            this.trenutniBroj = new System.Windows.Forms.TextBox();
             this.tr = new System.Windows.Forms.Label();
             this.levaZagrada = new System.Windows.Forms.Button();
             this.desnaZagrada = new System.Windows.Forms.Button();
+            this.prvi = new System.Windows.Forms.Button();
+            this.drugi = new System.Windows.Forms.Button();
+            this.treci = new System.Windows.Forms.Button();
+            this.cetvrti = new System.Windows.Forms.Button();
+            this.peti = new System.Windows.Forms.Button();
+            this.sesti = new System.Windows.Forms.Button();
+            this.trenutniBroj = new System.Windows.Forms.Button();
+            this.brojPogadjas = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // brojPogadjas
-            // 
-            this.brojPogadjas.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brojPogadjas.ForeColor = System.Drawing.SystemColors.Window;
-            this.brojPogadjas.Location = new System.Drawing.Point(146, 13);
-            this.brojPogadjas.Multiline = true;
-            this.brojPogadjas.Name = "brojPogadjas";
-            this.brojPogadjas.ReadOnly = true;
-            this.brojPogadjas.Size = new System.Drawing.Size(122, 38);
-            this.brojPogadjas.TabIndex = 0;
-            this.brojPogadjas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // prvi
-            // 
-            this.prvi.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prvi.ForeColor = System.Drawing.SystemColors.Window;
-            this.prvi.Location = new System.Drawing.Point(14, 68);
-            this.prvi.Multiline = true;
-            this.prvi.Name = "prvi";
-            this.prvi.ReadOnly = true;
-            this.prvi.Size = new System.Drawing.Size(38, 38);
-            this.prvi.TabIndex = 1;
-            this.prvi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.prvi.Click += new System.EventHandler(this.Prvi_Click);
-            // 
-            // drugi
-            // 
-            this.drugi.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drugi.ForeColor = System.Drawing.SystemColors.Window;
-            this.drugi.Location = new System.Drawing.Point(58, 68);
-            this.drugi.Multiline = true;
-            this.drugi.Name = "drugi";
-            this.drugi.ReadOnly = true;
-            this.drugi.Size = new System.Drawing.Size(38, 38);
-            this.drugi.TabIndex = 2;
-            this.drugi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.drugi.Click += new System.EventHandler(this.Drugi_Click);
-            // 
-            // treci
-            // 
-            this.treci.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treci.ForeColor = System.Drawing.SystemColors.Window;
-            this.treci.Location = new System.Drawing.Point(102, 68);
-            this.treci.Multiline = true;
-            this.treci.Name = "treci";
-            this.treci.ReadOnly = true;
-            this.treci.Size = new System.Drawing.Size(38, 38);
-            this.treci.TabIndex = 3;
-            this.treci.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.treci.Click += new System.EventHandler(this.Treci_Click);
-            // 
-            // cetvrti
-            // 
-            this.cetvrti.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cetvrti.ForeColor = System.Drawing.SystemColors.Window;
-            this.cetvrti.Location = new System.Drawing.Point(146, 68);
-            this.cetvrti.Multiline = true;
-            this.cetvrti.Name = "cetvrti";
-            this.cetvrti.ReadOnly = true;
-            this.cetvrti.Size = new System.Drawing.Size(38, 38);
-            this.cetvrti.TabIndex = 4;
-            this.cetvrti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cetvrti.Click += new System.EventHandler(this.Cetvrti_Click);
-            // 
-            // peti
-            // 
-            this.peti.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.peti.ForeColor = System.Drawing.SystemColors.Window;
-            this.peti.Location = new System.Drawing.Point(204, 68);
-            this.peti.Multiline = true;
-            this.peti.Name = "peti";
-            this.peti.ReadOnly = true;
-            this.peti.Size = new System.Drawing.Size(72, 38);
-            this.peti.TabIndex = 5;
-            this.peti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.peti.Click += new System.EventHandler(this.Peti_Click);
-            // 
-            // sesti
-            // 
-            this.sesti.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sesti.ForeColor = System.Drawing.SystemColors.Window;
-            this.sesti.Location = new System.Drawing.Point(297, 68);
-            this.sesti.Multiline = true;
-            this.sesti.Name = "sesti";
-            this.sesti.ReadOnly = true;
-            this.sesti.Size = new System.Drawing.Size(91, 38);
-            this.sesti.TabIndex = 6;
-            this.sesti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sesti.Click += new System.EventHandler(this.Sesti_Click);
             // 
             // stop
             // 
@@ -227,22 +137,11 @@
             this.nazad.UseVisualStyleBackColor = true;
             this.nazad.Click += new System.EventHandler(this.Nazad_Click);
             // 
-            // trenutniBroj
-            // 
-            this.trenutniBroj.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trenutniBroj.Location = new System.Drawing.Point(394, 13);
-            this.trenutniBroj.Multiline = true;
-            this.trenutniBroj.Name = "trenutniBroj";
-            this.trenutniBroj.ReadOnly = true;
-            this.trenutniBroj.Size = new System.Drawing.Size(72, 38);
-            this.trenutniBroj.TabIndex = 17;
-            this.trenutniBroj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tr
             // 
             this.tr.AutoSize = true;
             this.tr.Font = new System.Drawing.Font("Fira Code", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tr.Location = new System.Drawing.Point(306, 20);
+            this.tr.Location = new System.Drawing.Point(298, 20);
             this.tr.Name = "tr";
             this.tr.Size = new System.Drawing.Size(82, 21);
             this.tr.TabIndex = 18;
@@ -270,16 +169,101 @@
             this.desnaZagrada.UseVisualStyleBackColor = true;
             this.desnaZagrada.Click += new System.EventHandler(this.DesnaZagrada_Click);
             // 
+            // prvi
+            // 
+            this.prvi.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prvi.Location = new System.Drawing.Point(14, 68);
+            this.prvi.Name = "prvi";
+            this.prvi.Size = new System.Drawing.Size(38, 38);
+            this.prvi.TabIndex = 21;
+            this.prvi.UseVisualStyleBackColor = true;
+            this.prvi.Click += new System.EventHandler(this.Prvi_Click_1);
+            // 
+            // drugi
+            // 
+            this.drugi.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugi.Location = new System.Drawing.Point(58, 68);
+            this.drugi.Name = "drugi";
+            this.drugi.Size = new System.Drawing.Size(38, 38);
+            this.drugi.TabIndex = 22;
+            this.drugi.UseVisualStyleBackColor = true;
+            this.drugi.Click += new System.EventHandler(this.Drugi_Click_1);
+            // 
+            // treci
+            // 
+            this.treci.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treci.Location = new System.Drawing.Point(102, 68);
+            this.treci.Name = "treci";
+            this.treci.Size = new System.Drawing.Size(38, 38);
+            this.treci.TabIndex = 23;
+            this.treci.UseVisualStyleBackColor = true;
+            this.treci.Click += new System.EventHandler(this.Treci_Click_1);
+            // 
+            // cetvrti
+            // 
+            this.cetvrti.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cetvrti.Location = new System.Drawing.Point(146, 68);
+            this.cetvrti.Name = "cetvrti";
+            this.cetvrti.Size = new System.Drawing.Size(38, 38);
+            this.cetvrti.TabIndex = 24;
+            this.cetvrti.UseVisualStyleBackColor = true;
+            this.cetvrti.Click += new System.EventHandler(this.Cetvrti_Click_1);
+            // 
+            // peti
+            // 
+            this.peti.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.peti.Location = new System.Drawing.Point(216, 68);
+            this.peti.Name = "peti";
+            this.peti.Size = new System.Drawing.Size(79, 38);
+            this.peti.TabIndex = 25;
+            this.peti.UseVisualStyleBackColor = true;
+            this.peti.Click += new System.EventHandler(this.Peti_Click_1);
+            // 
+            // sesti
+            // 
+            this.sesti.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sesti.Location = new System.Drawing.Point(301, 68);
+            this.sesti.Name = "sesti";
+            this.sesti.Size = new System.Drawing.Size(79, 38);
+            this.sesti.TabIndex = 26;
+            this.sesti.UseVisualStyleBackColor = true;
+            this.sesti.Click += new System.EventHandler(this.Sesti_Click_1);
+            // 
+            // trenutniBroj
+            // 
+            this.trenutniBroj.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trenutniBroj.Location = new System.Drawing.Point(387, 8);
+            this.trenutniBroj.Name = "trenutniBroj";
+            this.trenutniBroj.Size = new System.Drawing.Size(79, 43);
+            this.trenutniBroj.TabIndex = 27;
+            this.trenutniBroj.UseVisualStyleBackColor = true;
+            // 
+            // brojPogadjas
+            // 
+            this.brojPogadjas.Font = new System.Drawing.Font("Fira Code", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brojPogadjas.Location = new System.Drawing.Point(147, 10);
+            this.brojPogadjas.Name = "brojPogadjas";
+            this.brojPogadjas.Size = new System.Drawing.Size(104, 43);
+            this.brojPogadjas.TabIndex = 28;
+            this.brojPogadjas.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(525, 252);
+            this.Controls.Add(this.brojPogadjas);
+            this.Controls.Add(this.trenutniBroj);
+            this.Controls.Add(this.sesti);
+            this.Controls.Add(this.peti);
+            this.Controls.Add(this.cetvrti);
+            this.Controls.Add(this.treci);
+            this.Controls.Add(this.drugi);
+            this.Controls.Add(this.prvi);
             this.Controls.Add(this.desnaZagrada);
             this.Controls.Add(this.levaZagrada);
             this.Controls.Add(this.tr);
-            this.Controls.Add(this.trenutniBroj);
             this.Controls.Add(this.nazad);
             this.Controls.Add(this.podeljeno);
             this.Controls.Add(this.puta);
@@ -288,13 +272,6 @@
             this.Controls.Add(this.ok);
             this.Controls.Add(this.input);
             this.Controls.Add(this.stop);
-            this.Controls.Add(this.sesti);
-            this.Controls.Add(this.peti);
-            this.Controls.Add(this.cetvrti);
-            this.Controls.Add(this.treci);
-            this.Controls.Add(this.drugi);
-            this.Controls.Add(this.prvi);
-            this.Controls.Add(this.brojPogadjas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(541, 291);
             this.Name = "Form1";
@@ -305,8 +282,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox brojPogadjas;
         private System.Windows.Forms.Button stop;
         private System.Windows.Forms.TextBox input;
         private System.Windows.Forms.Button ok;
@@ -314,17 +289,18 @@
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button puta;
         private System.Windows.Forms.Button podeljeno;
-        private System.Windows.Forms.TextBox trenutniBroj;
         private System.Windows.Forms.Label tr;
         internal System.Windows.Forms.Button nazad;
         private System.Windows.Forms.Button levaZagrada;
         private System.Windows.Forms.Button desnaZagrada;
-        private System.Windows.Forms.TextBox prvi;
-        private System.Windows.Forms.TextBox drugi;
-        private System.Windows.Forms.TextBox treci;
-        private System.Windows.Forms.TextBox cetvrti;
-        private System.Windows.Forms.TextBox peti;
-        private System.Windows.Forms.TextBox sesti;
+        private System.Windows.Forms.Button prvi;
+        private System.Windows.Forms.Button drugi;
+        private System.Windows.Forms.Button treci;
+        private System.Windows.Forms.Button cetvrti;
+        private System.Windows.Forms.Button peti;
+        private System.Windows.Forms.Button sesti;
+        private System.Windows.Forms.Button trenutniBroj;
+        private System.Windows.Forms.Button brojPogadjas;
     }
 }
 

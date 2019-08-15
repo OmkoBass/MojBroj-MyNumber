@@ -81,6 +81,54 @@ namespace mojBroj
             catch { MessageBox.Show("Los unos! / Bad input!"); this.Close(); }
         }
 
+        private void Prvi_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(prvi.Text);
+            prvi.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
+        private void Drugi_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(drugi.Text);
+            drugi.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
+        private void Treci_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(treci.Text);
+            treci.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
+        private void Cetvrti_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(cetvrti.Text);
+            cetvrti.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
+        private void Peti_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(peti.Text);
+            peti.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
+        private void Sesti_Click_1(object sender, EventArgs e)
+        {
+            input.AppendText(sesti.Text);
+            sesti.BackColor = Color.White;
+            enableOperations();
+            disableNumbers();
+        }
+
         private void Plus_Click(object sender, EventArgs e)
         {
             input.AppendText("+");
@@ -119,54 +167,6 @@ namespace mojBroj
             input.AppendText(")");
             disableOperations();
             enableNumbers();
-        }
-
-        private void Prvi_Click(object sender, EventArgs e)
-        {
-            input.AppendText(prvi.Text);
-            prvi.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
-        }
-
-        private void Drugi_Click(object sender, EventArgs e)
-        {
-            input.AppendText(drugi.Text);
-            drugi.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
-        }
-
-        private void Treci_Click(object sender, EventArgs e)
-        {
-            input.AppendText(treci.Text);
-            treci.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
-        }
-
-        private void Cetvrti_Click(object sender, EventArgs e)
-        {
-            input.AppendText(cetvrti.Text);
-            cetvrti.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
-        }
-
-        private void Peti_Click(object sender, EventArgs e)
-        {
-            input.AppendText(peti.Text);
-            peti.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
-        }
-
-        private void Sesti_Click(object sender, EventArgs e)
-        {
-            input.AppendText(sesti.Text);
-            sesti.BackColor = Color.White;
-            enableOperations();
-            disableNumbers();
         }
 
         private void Nazad_Click(object sender, EventArgs e)
