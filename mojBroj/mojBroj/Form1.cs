@@ -10,16 +10,22 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Collections;
 using org.mariuszgromada.math.mxparser;
+using System.Timers;
 
 namespace mojBroj
 {
 
     public partial class Form1 : Form
     {
-
+        int s = 0;
         public Form1()
         {
             InitializeComponent();
+
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Interval = 1000; //intercal = 1 sec
+            timer1.Tick += new EventHandler(Timer1_Tick);
+            timer1.Enabled = true;
 
             MaximizeBox = false;
             MinimizeBox = false;
@@ -32,6 +38,12 @@ namespace mojBroj
             nazad.Enabled = false;
             levaZagrada.Enabled = false;
             desnaZagrada.Enabled = false;
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if(s == 60) { MessageBox.Show("Nema vise vremena."); this.Close(); }
+            else { progress.Value = s; s += 1; }
         }
 
         int brojac = 0;
@@ -159,13 +171,11 @@ namespace mojBroj
         private void LevaZagrada_Click_1(object sender, EventArgs e)
         {
             input.AppendText("(");
-            disableOperations();
             enableNumbers();
         }
         private void DesnaZagrada_Click(object sender, EventArgs e)
         {
             input.AppendText(")");
-            disableOperations();
             enableNumbers();
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.stop = new System.Windows.Forms.Button();
             this.input = new System.Windows.Forms.TextBox();
             this.ok = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@
             this.sesti = new System.Windows.Forms.Button();
             this.trenutniBroj = new System.Windows.Forms.Button();
             this.brojPogadjas = new System.Windows.Forms.Button();
+            this.progress = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // stop
@@ -247,12 +250,26 @@
             this.brojPogadjas.TabIndex = 28;
             this.brojPogadjas.UseVisualStyleBackColor = true;
             // 
+            // progress
+            // 
+            this.progress.Location = new System.Drawing.Point(10, 266);
+            this.progress.MarqueeAnimationSpeed = 1000;
+            this.progress.Maximum = 75;
+            this.progress.Name = "progress";
+            this.progress.Size = new System.Drawing.Size(503, 23);
+            this.progress.TabIndex = 29;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(525, 252);
+            this.ClientSize = new System.Drawing.Size(525, 301);
+            this.Controls.Add(this.progress);
             this.Controls.Add(this.brojPogadjas);
             this.Controls.Add(this.trenutniBroj);
             this.Controls.Add(this.sesti);
@@ -273,7 +290,7 @@
             this.Controls.Add(this.input);
             this.Controls.Add(this.stop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximumSize = new System.Drawing.Size(541, 291);
+            this.MaximumSize = new System.Drawing.Size(541, 340);
             this.Name = "Form1";
             this.Text = "Moj broj";
             this.ResumeLayout(false);
@@ -301,6 +318,8 @@
         private System.Windows.Forms.Button sesti;
         private System.Windows.Forms.Button trenutniBroj;
         private System.Windows.Forms.Button brojPogadjas;
+        private System.Windows.Forms.ProgressBar progress;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
