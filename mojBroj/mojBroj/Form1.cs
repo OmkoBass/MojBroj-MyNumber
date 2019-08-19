@@ -42,7 +42,7 @@ namespace mojBroj
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if(s == 60) { timer1.Enabled = false; MessageBox.Show("Nema vise vremena."); this.Close(); }
+            if(s == 60) { s = 0; MessageBox.Show("Nema vise vremena."); this.Close(); }
             else { progress.Value = s; s += 1; }
         }
 
@@ -84,13 +84,13 @@ namespace mojBroj
             try
             {
                 Expression ex = new Expression(input.Text);
-                string s = ex.calculate().ToString();
-                int x = Int16.Parse(s);
+                string ss = ex.calculate().ToString();
+                int x = Int16.Parse(ss);
                 int y = Int16.Parse(brojPogadjas.Text);
-                if (x == y) { timer1.Enabled = false; MessageBox.Show("Tacno!"); this.Close(); }
-                else { timer1.Enabled = false; MessageBox.Show($"Netacno! Tvoj broj je {x}"); this.Close(); }
+                if (x == y) { s = 0; MessageBox.Show("Tacno!"); this.Close(); }
+                else { s = 0; MessageBox.Show($"Netacno! Tvoj broj je {x}"); this.Close(); }
             }
-            catch { timer1.Enabled = false; MessageBox.Show("Los unos! / Bad input!"); this.Close(); }
+            catch { s = 0; MessageBox.Show("Los unos! / Bad input!"); this.Close(); }
         }
 
         private void Prvi_Click_1(object sender, EventArgs e)
